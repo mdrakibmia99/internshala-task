@@ -1,6 +1,9 @@
 import React from 'react';
+import useUsersInfo from '../../../hooks/useUsersInfo';
+import './UserTable.module.css'
 
 const UserTable = () => {
+    const [users]=useUsersInfo();
     return (
         <div>
             <table>
@@ -15,9 +18,8 @@ const UserTable = () => {
                 </thead>
                 <tbody>
                     {
-                        users?.map(user => <tr
-                            key={user?.id?.value}
-                        >
+                        users?.map((user,index) => <tr
+                            key={index+"_uniq"}>
                             <td data-column="Name">{user?.name?.title} {user?.name?.first} {user?.name?.last}</td>
                             <td data-column="Gender">{user?.gender}</td>
                             <td data-column="City">{user?.location?.city}</td>
