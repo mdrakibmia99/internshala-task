@@ -1,0 +1,71 @@
+.user-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    border: 1px dotted orange;
+    margin-top: 100px;
+
+}
+.button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  .button:hover{
+    background-color: green; 
+  }
+.items{
+    white-space: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+.user-thumb{
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#dob,#phone-number{
+    background:orange;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+.upcoming-birthday{
+    background:green;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius:5px;
+    color:white;
+    max-width: 90%;
+}
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    .user-section{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 15px;
+   
+     
+    }
+    .user-cart{
+        width: 100%;
+    }
+    .items{
+        width: 100%;
+        margin: 0 auto;
+    padding: 10px 15px;
+    }
+   
+   
+}

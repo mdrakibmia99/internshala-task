@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import useUsersInfo from '../../../hooks/useUsersInfo';
-import './UserTable.module.css'
+import './UserTable.css'
 
 const UserTable = ({setUser}) => {
     const navigate=useNavigate()
