@@ -2,6 +2,7 @@ table {
     max-width: 750px;
     border-collapse: collapse;
     margin: 50px auto;
+    
 }
 
 /* Zebra striping */
@@ -43,13 +44,15 @@ th {
     td,
     tr {
         display: block;
+        white-space: unset;
+
     }
 
     /* Hide table headers (but not display: none;, for accessibility) */
     thead tr {
         position: absolute;
-        top: -9999px;
-        left: -9999px;
+        top: -999px;
+        left: -999px;
     }
 
     tr {

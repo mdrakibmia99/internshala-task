@@ -1,9 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import useUsersInfo from '../../../hooks/useUsersInfo';
 import './UserTable.module.css'
 
-const UserTable = () => {
+const UserTable = ({setUser}) => {
+    const navigate=useNavigate()
     const [users]=useUsersInfo();
+    
+    const handleInformation=(user)=>{
+        setUser(user);
+        const email=user?.email;
+        navigate(`/user:${email}`)
+
+    }
     return (
         <div>
             <table>
@@ -19,7 +29,8 @@ const UserTable = () => {
                 <tbody>
                     {
                         users?.map((user,index) => <tr
-                            key={index+"_uniq"}>
+                            key={index+"_uniq"}
+                            onClick={()=>handleInformation(user)}>
                             <td data-column="Name">{user?.name?.title} {user?.name?.first} {user?.name?.last}</td>
                             <td data-column="Gender">{user?.gender}</td>
                             <td data-column="City">{user?.location?.city}</td>
